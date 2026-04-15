@@ -1999,6 +1999,55 @@ body {
   margin-bottom: 60px;
 }
 
+/* Layout Foto + Texto */
+.autoridade-hero {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.autoridade-hero-foto {
+  flex-shrink: 0;
+}
+
+.foto-fundador {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid rgba(12, 192, 223, 0.5);
+  box-shadow: 0 0 40px rgba(12, 192, 223, 0.25);
+}
+
+.autoridade-hero-texto .autoridade-title {
+  margin-bottom: 16px;
+}
+
+.autoridade-hero-texto .autoridade-sub {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .autoridade-hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .foto-fundador {
+    width: 130px;
+    height: 130px;
+  }
+
+  .autoridade-hero-texto .autoridade-title {
+    font-size: 2rem;
+  }
+}
+
+
 .autoridade-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2394,6 +2443,76 @@ body {
   transform: translateY(-3px) scale(1.02);
 }
 
+/* Badge "Vagas Limitadas" */
+.cta-final-badge {
+  display: inline-block;
+  background: rgba(12, 192, 223, 0.15);
+  border: 1px solid rgba(12, 192, 223, 0.4);
+  color: #0cc0df;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+/* Steps do Formulário */
+.cta-final-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 130px;
+}
+
+.cta-step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0cc0df, #0095f6);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-step-txt {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.cta-step-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+/* Disclaimer de urgência */
+.cta-final-disclaimer {
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: #666;
+  letter-spacing: 0.01em;
+}
+
 @media (max-width: 768px) {
   .cta-final-title {
     font-size: 2rem;
@@ -2401,6 +2520,25 @@ body {
 
   .cta-gigante {
     padding: 18px 28px;
+  }
+
+  .cta-step-divider {
+    display: none;
+  }
+
+  .cta-final-steps {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-step {
+    flex-direction: row;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .cta-step-txt {
+    text-align: left;
   }
 }
 
